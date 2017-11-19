@@ -59,7 +59,7 @@
 }
 
 .popular-product-container{
-	padding: 30px 0px;
+	padding: 30px 0px 50px 0px;
 	background-color: #FFF4F4;
 }
 
@@ -115,7 +115,7 @@
   	1%{
     	display: block;
     	opacity: 0;
-    	transform: scale(0);
+    	transform: scale(0.5);
   	}
   	100%{
     	opacity: 1;

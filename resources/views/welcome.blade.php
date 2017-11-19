@@ -58,6 +58,8 @@
 
     @include('popular-product')
 
+    @include('pet-quotes')
+
 
     <!-- Scripts -->
     <!--<script src="{{ url('js/welcome.js') }}"></script> -->
