@@ -1,0 +1,20 @@
+
+$imagedir:'/images/'; // define the base path before the mixin
+
+@mixin backgroundShorthandWithExternalVar($filename,$position:0 0,$repeat: no-repeat) {
+    background: url(#{$imagedir}#{$filename}) $repeat $position;
+}
+
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        //image: url(./#{$imgpath});
+    }
+}
+
+
+.welcome-section{
+	 height: 600px;
+	 display: block;
+	 background-image: url("/images/cover2.jpg");
+}
