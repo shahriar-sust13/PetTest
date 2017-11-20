@@ -4,6 +4,7 @@
 	height: 480px;
 	background: url("../images/quote_back.jpg") no-repeat;
 	background-position: center center;
+	padding: 150px 0px;
 	//background-attachment: fixed;
 }
 
@@ -15,4 +16,69 @@
 	height: 100%;
 	display: block;
 	background-color: rgba(10, 131, 167, 0.65);;
+}
+
+.slider-section{
+	height: 100%;
+}
+
+.slider-btn-section{
+	padding-top: 100px;
+}
+
+.slider-left-btn{
+	display: block;
+	height: 60px;
+	background: url("../images/left_arrow.png") no-repeat;
+	background-position: center center;
+	transition: all 0.8s;
+}
+
+.slider-right-btn{
+	display: block;
+	height: 60px;
+	background: url("../images/right_arrow.png") no-repeat;
+	background-position: center center;
+	transition: all 0.8s;
+}
+
+.slider-left-btn:hover{
+	background: url("../images/left_arrow_white.png") no-repeat;
+	background-position: center center;
+}
+
+.slider-right-btn:hover{
+	background: url("../images/right_arrow_white.png") no-repeat;
+	background-position: center center;
+}
+
+.slider-body{
+	height: 100%;
+	padding: 90px 20px;
+	font-size: 22px;
+	color: #D9D9D9;
+}
+
+.slider-content{
+	display: none;
+}
+
+.author-text{
+	font-family: 'Berkshire Swash', serif;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.author-name{
+	font-family: 'Quattrocento', serif;
+	font-weight: bold;
+	font-size: 28px;
+	margin-top: 10px;
+}
+
+.active-content{
+}
+
+.disable-content{
+	display: none;
 }

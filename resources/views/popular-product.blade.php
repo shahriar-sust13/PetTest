@@ -84,4 +84,4 @@
 	</div>
 </div>
 
-<script src="{{ url('js/welcome.js') }}" type="text/javascript"></script>
+<script src="{{ url('/js/welcome.js') }}" type="text/javascript"></script>
