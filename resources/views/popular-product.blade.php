@@ -6,9 +6,9 @@
 				<h1>Popular Product</h1>
 			</div>
 			<div class="col-md-6 col-md-offset-3 col-sm-12 text-center product-type">
-				<div class="col-md-4 col-sm-4"><a id="type1" class="active-product" style="color:#E7E6E6;" href="#type1">Featured</a></div>
-				<div class="col-md-4 col-sm-4"><a id="type2" href="#type2">Latest</a></div>
-				<div class="col-md-4 col-sm-4"><a id="type3" href="#type3">Popular</a></div>
+				<div class="col-md-4 col-sm-4"><a id="type1" class="active-product" style="color:#E7E6E6;" role="button">Featured</a></div>
+				<div class="col-md-4 col-sm-4"><a id="type2" role="button">Latest</a></div>
+				<div class="col-md-4 col-sm-4"><a id="type3" role="button">Popular</a></div>
 			</div>
 		</div>
 		<div class="row item-row">

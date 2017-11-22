@@ -28,7 +28,9 @@
 }
 
 .logo-text h3{
-	font-size: 32px;
+	font-size: 33px;
+	font-family: 'Bree Serif', sans-serif;
+	margin-top: 12px;
 }
 
 .navbar-container{

@@ -9,7 +9,7 @@
 	<div class="container slider-section">
 		<div class="row">
 			<div class="col-md-offset-1 col-md-1 slider-btn-section">
-				<a href="#content0"><div class="slider-left-btn"></div></a>
+				<a role="button"><div class="slider-left-btn"></div></a>
 			</div>
 			<div class="col-md-8 slider-body">
 				<div class="slider-content text-center" id="content0">
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="col-md-1 slider-btn-section">
-				<a href="#content0"><div class="slider-right-btn"></div></a>
+				<a role="button"><div class="slider-right-btn"></div></a>
 			</div>
 		</div>
 	</div>
