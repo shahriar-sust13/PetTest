@@ -1,5 +1,5 @@
 
-.welcome-section {
+.welcome-container {
   height: 850px;
   display: block;
   background: url("../images/cover2.jpg");
@@ -12,6 +12,53 @@
 	height: 135px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.welcome-section{
+	padding-top: 175px;
+}
+
+.welcome-title{
+	font-size: 48px;
+	color: #E838AD;
+	font-weight: bold;
+	font-family: 'Merriweather', serif;
+}
+
+.welcome-section p{
+	font-size: 30px;
+	color: #F3F3F3;
+	font-weight: bold;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.welcome-btn-container{
+	padding: 0px 100px;
+}
+
+.welcome-btn{
+	display: block;
+	height: 70px;
+	background-color: transparent;
+	padding-top: 8px;
+	border: solid rgba(203, 203, 203, 0.4) 5px;
+	font-size: 28px;
+	font-weight: bold;
+	font-family: 'Acme', sans-serif;
+	color: #EEEEEE;
+	text-decoration: none;
+	transition: all 1s;
+}
+
+.welcome-btn:hover{
+	background-color: #D7AE1D;
+	color: #EEEEEE;
+	border: solid transparent 5px;
+	text-decoration: none;
+}
+
+.welcome-btn:link{
+	text-decoration: none;
 }
 
 .logo-container img{

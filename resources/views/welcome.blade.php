@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +36,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
 
 
-    <div class="container-fluid welcome-section">
+    <div class="container-fluid welcome-container">
         <div class="container header-section">
             <div class="row">
                 <div class="col-md-4">
@@ -55,6 +57,17 @@
                         <a class="text-center" href="#">LogIn</a>
                         <a class="text-center" href="#">Register</a>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container welcome-section">
+            <h3 class="text-center welcome-title">Surround your children with animals, for they are the teachers with purity of heart</h3>
+            <p class="text-center">
+                Do You Like to have a Pet?
+            </p>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 welcome-btn-container">
+                    <a href="#" class="welcome-btn text-center">Visit Home</a>
                 </div>
             </div>
         </div>
