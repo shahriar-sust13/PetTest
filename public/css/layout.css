@@ -1,0 +1,15 @@
+.main-wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
+.body-wrapper {
+  padding-bottom: 70px;
+}
+
+.foot-wrapper {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+}

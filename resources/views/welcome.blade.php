@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="navbar-container text-right">
-                        <a class="text-center" href="#">Home</a>
+                        <a class="text-center" href="{{ url('/home') }}">Home</a>
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
                         <a class="text-center" href="#">LogIn</a>
@@ -67,7 +67,7 @@
             </p>
             <div class="row">
                 <div class="col-md-offset-4 col-md-4 welcome-btn-container">
-                    <a href="#" class="welcome-btn text-center">Visit Home</a>
+                    <a href="{{ url('/home') }}"" class="welcome-btn text-center">Visit Home</a>
                 </div>
             </div>
         </div>
