@@ -2,7 +2,7 @@
 .welcome-container {
   height: 850px;
   display: block;
-  background: url("../images/cover2.jpg");
+  background: url("../images/cover.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -20,7 +20,7 @@
 
 .welcome-title{
 	font-size: 48px;
-	color: #E838AD;
+	color: #DEDEDE;
 	font-weight: bold;
 	font-family: 'Merriweather', serif;
 }

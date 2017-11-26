@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="container welcome-section">
-            <h3 class="text-center welcome-title">Surround your children with animals, for they are the teachers with purity of heart</h3>
+            <h3 class="text-center welcome-title">Until one has loved an animal, a part of one's soul remains unawakened.</h3>
             <p class="text-center">
                 Do You Like to have a Pet?
             </p>
