@@ -9,6 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500, 300' rel='stylesheet' type='text/css'>
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/auth.css') }}" rel="stylesheet">
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -36,7 +37,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
 
 
-    <div class="container-fluid welcome-container">
+    <div class="container-fluid auth-container">
+    	<div class="auth-overlay"></div>
         <div class="container header-section">
             <div class="row">
                 <div class="col-md-4">
@@ -54,30 +56,34 @@
                         <a class="text-center" href="{{ url('/home') }}">Home</a>
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
-                        <a class="text-center" href="{{ url('/auth') }}">LogIn</a>
-                        <a class="text-center" href="#">Register</a>
+                        <a class="text-center" href="{{ url('/auth') }}">Log In</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container welcome-section">
-            <h3 class="text-center welcome-title">Until one has loved an animal, a part of one's soul remains unawakened.</h3>
-            <p class="text-center">
-                Do You Like to have a Pet?
-            </p>
-            <div class="row">
-                <div class="col-md-offset-4 col-md-4 welcome-btn-container">
-                    <a href="{{ url('/home') }}"" class="welcome-btn text-center">Visit Home</a>
-                </div>
-            </div>
+        <div class="container auth-body">
+        	<div class="row">
+        		<div class="col-md-offset-3 col-md-6">
+        			<div class="form-container">
+        				<div class="auth-btn-container">
+        					<a id="login-btn" class="text-center active-btn" href="">Log In</a><a id="register-btn" class="text-center" href="">Sign Up</a>
+        				</div>
+        				<form id="login-form" class="form-section">
+        					<div class="form-group">
+        						<input type="email" class="form-control form-item text-center" id="email" name="email" placeholder="Email">
+        						<input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="pwd">
+        					</div> 
+        					<div class="col-md-offset-3 col-md-6">
+        						<button type="submit" class="submit-btn">Submit</button>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
         </div>
     </div>
 
-    @include('popular-product')
-
-    @include('pet-quotes')
-
-    @include('blog-panel')
+    @include("footer")
 
 
     <!-- Scripts -->

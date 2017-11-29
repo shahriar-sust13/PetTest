@@ -1,0 +1,95 @@
+
+.auth-container{
+	height: 950px;
+	display: block;
+	background: url("../images/auth-bg.jpeg");
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	position: relative;
+}
+
+.auth-overlay{
+  	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	transition: background 0.5s ease;
+}
+
+.auth-body{
+	padding-top: 120px;
+}
+
+.form-container{
+	display: block;
+	margin: 0px 30px;
+	padding: 30px;
+	//height: 500px;
+	background-color: rgba(6, 27, 42, 0.8);
+}
+
+.auth-btn-container a{
+	display: inline-block;
+	width: 217px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 28px;
+	color: #9E9E9E;
+	text-decoration: none;
+	background-color: #4D4F51;
+	transition: all 0.5s;
+}
+
+.auth-btn-container a:link{
+	text-decoration: none;
+}
+
+.auth-btn-container a:hover{
+	color: #E6E6E6;
+	text-decoration: none;
+	background-color: #1B79A2;
+}
+
+.active-btn{
+	color: #E6E6E6 !important;
+	text-decoration: none;
+	background-color: #1B79A2 !important;
+}
+
+.form-section{
+	margin-top: 40px;
+}
+
+.form-item{
+	border: solid #A9A9A9 1px !important;
+	border-radius: 0px !important;
+	color: #A9A9A9 !important;
+	margin: 20px 0px;
+	height: 55px !important;
+	font-size: 26px !important;
+	background-color: transparent !important;
+}
+
+#login-form{
+	height: 225px;
+}
+
+.submit-btn{
+	width: 100%;
+	height: 55px;
+	margin-top: 15px;
+	font-size: 30px;
+	color: #A9A9A9 !important;
+	background-color: transparent !important;
+	border: solid #A9A9A9 1px !important;
+	transition: all 0.7s;
+}
+
+.submit-btn:hover{
+	background-color: #1B79A2 !important;
+	border: none !important;
+	color: #E8E8E8 !important;
+}
