@@ -22,3 +22,7 @@ Route::get('/home', function () {
 Route::get('/auth', function () {
     return view('auth');
 });
+
+Route::get('/pet', function () {
+    return view('pet');
+});
