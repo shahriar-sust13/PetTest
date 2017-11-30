@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,9 +68,9 @@
         		<div class="col-md-offset-3 col-md-6">
         			<div class="form-container">
         				<div class="auth-btn-container">
-        					<a id="login-btn" class="text-center active-btn" href="">Log In</a><a id="register-btn" class="text-center" href="">Sign Up</a>
+        					<a id="login-btn" class="text-center active-btn" role="button">Log In</a><a id="register-btn" class="text-center" role="button">Sign Up</a>
         				</div>
-        				<form id="login-form" class="form-section">
+        				<form id="login-form" class="form-section active-form">
         					<div class="form-group">
         						<input type="email" class="form-control form-item text-center" id="email" name="email" placeholder="Email">
         						<input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="pwd">
@@ -76,7 +78,17 @@
         					<div class="col-md-offset-3 col-md-6">
         						<button type="submit" class="submit-btn">Submit</button>
         					</div>
-        				</div>
+        				</form>
+                        <form id="register-form" class="form-section disable-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-item text-center" id="name" name="name" placeholder="Your Name">
+                                <input type="email" class="form-control form-item text-center" id="email" name="email" placeholder="Email">
+                                <input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="pwd">
+                            </div> 
+                            <div class="col-md-offset-3 col-md-6">
+                                <button type="submit" class="submit-btn">Submit</button>
+                            </div>
+                        </form>
         			</div>
         		</div>
         	</div>
@@ -87,7 +99,8 @@
 
 
     <!-- Scripts -->
-    <!--<script src="{{ url('js/welcome.js') }}"></script> -->
+    
+    <script src="{{ url('js/auth.js') }}"></script>
         
 
 </body>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pet World</title>
+    
     <!-- <base href="http://localhost/PetTest/public/"> -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500, 300' rel='stylesheet' type='text/css'>
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
@@ -55,7 +56,6 @@
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
                         <a class="text-center" href="{{ url('/auth') }}">LogIn</a>
-                        <a class="text-center" href="#">Register</a>
                     </div>
                 </div>
             </div>
