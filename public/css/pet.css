@@ -1,0 +1,165 @@
+
+.profile-bg{
+	background-color: #E7E7E7;
+	display: block;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0;
+	right: 0px;
+	z-index: -1;
+}
+
+.pet-body{
+	padding-top: 40px;
+}
+
+.slider-bottom-border{
+	border-bottom: solid #A4A4A4 1px;
+	padding-bottom: 30px;
+}
+
+.slider-img-container{
+	height: 400px;
+	background-color: #C7D2D3;
+}
+
+.img-btn{
+	padding: 170px 0px;
+	display: inline-block;
+}
+
+#left-arrow div{
+	display: inline-block;
+	height: 60px;
+	width: 50px;
+	background: url("../images/left_arrow.png");
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	transition: all 1s;
+}
+
+#left-arrow div:hover{
+	background: url("../images/left_arrow_blue.png");
+	background-position: center center;
+  	background-repeat: no-repeat;
+}
+
+#right-arrow div{
+	display: inline-block;
+	height: 60px;
+	width: 50px;
+	background: url("../images/right_arrow.png");
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	transition: all 1s;
+}
+
+#right-arrow div:hover{
+	background: url("../images/right_arrow_blue.png");
+	background-position: center center;
+  	background-repeat: no-repeat;
+}
+
+.slider-img-container{
+	display: none;
+	overflow: hidden;
+	padding: 0px !important;
+}
+
+.slider-img-container img{
+	height: 400px;
+}
+
+.pet-text-section{
+	padding: 20px 40px 20px 40px;
+}
+
+.pet-name{
+	font-size: 28px;
+	color: #282929;
+	font-family: "Crete Round";
+}
+
+.description-container{
+	display: block;
+	background-color: #C6C6C6;
+	padding: 20px 20px 40px 20px !important;
+}
+
+.description-container p{
+	margin: 0px;
+	font-size: 22px;
+	color: #404040;
+	font-family: "Bree Serif";
+	line-height: 120%;
+}
+
+.author-img-container{
+	border: solid transparent 1px;
+	margin: 0px 40px;
+	border-radius: 50px;
+	height: 70px;
+	overflow: hidden;
+	margin-top: -30px;
+}
+
+.author-img-container img{
+	height: 70px;
+}
+
+
+.author-name-container{
+	padding: 0px !important;
+	margin-top: -10px;
+	margin-left: -45px;
+}
+
+.author-name-container h5{
+	font-size: 20px;
+	font-family: "Bitter";
+}
+
+.author-name-container a{
+	text-decoration: none;
+}
+
+.author-name-container a:link{
+	text-decoration: none;
+}
+
+.author-name-container a:hover{
+	text-decoration: none;
+}
+
+.pet-label{
+	height: 200px;
+	margin-top: 20px;
+}
+
+.pet-type-container{
+	display: block;
+	padding: 5px;
+	background-color: #169EB0;
+	border: transparent;
+	border-radius: 5px;
+}
+
+.pet-type-container h5{
+	font-size: 26px;
+	color: #E3E5E5;
+	font-family: "Acme";
+}
+
+.pet-contact-container{
+	margin-top: 15px;
+	display: block;
+	padding: 5px;
+}
+
+.pet-contact-container button{
+	font-size: 18px;
+	font-family: "Crete Round";
+	width: 200px;
+}
+

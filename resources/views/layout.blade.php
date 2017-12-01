@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pet World</title>
 
+	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/layout.css') }}" rel="stylesheet">
 
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500, 300' rel='stylesheet' type='text/css'>

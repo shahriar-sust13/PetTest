@@ -37,7 +37,6 @@
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
                         <a class="text-center" href="#">LogIn</a>
-                        <a class="text-center" href="#">Register</a>
                     </div>
                 </div>
             </div>
