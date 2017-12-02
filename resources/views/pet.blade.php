@@ -3,7 +3,6 @@
 	<link href="{{ asset('/css/pet.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
 	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 </head>
 
@@ -11,10 +10,7 @@
 
 @section('content')
 
-<!-- <div style="display: block; height: 1000px;"></div> -->
-
 <div class="profile-bg"></div>
-
 
 <div class="container pet-body">
 	<div class="row">

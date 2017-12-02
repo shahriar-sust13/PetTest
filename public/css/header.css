@@ -17,7 +17,7 @@
 
 .logo-text{
 	margin-top: 24px;
-	padding-left: 0px;
+	padding-left: 0px !important;
 	color: #3D3D3D;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;

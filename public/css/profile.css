@@ -1,0 +1,162 @@
+
+.profile-bg{
+	background-color: #ECECEC;
+	display: block;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0;
+	right: 0px;
+	z-index: -1;
+}
+
+.profile-box{
+	margin: 50px 0px;
+	background-color: #FAFAFA !important;
+	border: transparent;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile-pic-container{
+	padding: 25px 34px !important;
+	padding-right: 0px !important;
+}
+
+.profile-pic{
+	border: solid #D3D3D3 6px;
+	border-radius: 90px;
+	height: 150px !important;
+	overflow: hidden;
+}
+
+.profile-pic img{
+	height: 150px;
+}
+
+.profile-intro-section{
+	padding-top: 30px;
+	padding-bottom: 20px;
+	padding-left: 20px !important;
+}
+
+.profile-intro-section h5{
+	font-size: 25px;
+	color: #32bbb4;
+	font-weight: bold;
+	font-family: "Acme";
+}
+
+.profile-intro-section p{
+	font-size: 17px;
+	color: #747474;
+	line-height: 135%;
+	font-family: "Kreon";
+}
+
+.social-span a{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#facebook{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background: url('../images/fb2_grey.png') no-repeat;
+	background-position: center center;
+	background-size: 50px 50px;
+	transition: all 1s;
+}
+
+#facebook:hover{
+	background: url('../images/fb2.png') no-repeat;
+	background-position: center center;
+	background-size: 50px 50px;
+}
+
+#twitter{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background: url('../images/twitter_grey.png') no-repeat;
+	background-position: center center;
+	background-size: 50px 50px;
+	transition: all 1s;
+}
+
+#twitter:hover{
+	background: url('../images/twitter.png') no-repeat;
+	background-position: center center;
+	background-size: 50px 50px;
+}
+
+.tab-menu-section{
+	display: block;
+	height: 70px;
+	border-bottom: solid #17AFCA 8px;
+}
+
+.menu-item{
+	display: inline-block;
+	background-color: #E5E5E5;
+	font-size: 23px;
+	font-family: "Bitter";
+	color: #17AFCA;
+	border: transparent;
+	border-radius: 0px;
+	padding: 13px 0px !important;
+	text-decoration: none;
+	transition: all 0.7s;
+}
+
+.menu-item:link{
+	text-decoration: none;
+	color: #17AFCA;
+}
+
+.menu-item:hover{
+	text-decoration: none;
+	background-color: #D5D5D5;
+	color: #17AFCA;
+}
+
+.active-item{
+	background-color: #17AFCA;
+	color: #EAEAEA;
+}
+
+.active-item:hover{
+	background-color: #17AFCA !important;
+	color: #EAEAEA !important;
+}
+
+.tab-content{
+	padding-top: 0px;
+	padding-bottom: 70px;
+}
+
+.active-tab{
+	animation-name: tabOpen;
+	animation-duration: 0.8s;
+}
+
+.disable-tab{
+	display: none;
+}
+
+@keyframes tabOpen{
+    0%{
+    	display: none;
+    	opacity: 0;
+    }
+  	1%{
+    	display: block;
+    	opacity: 0;
+    	transform: scale(0.5);
+  	}
+  	100%{
+    	opacity: 1;
+    	transform: scale(1);
+  	}
+}

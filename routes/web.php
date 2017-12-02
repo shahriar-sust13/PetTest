@@ -26,3 +26,7 @@ Route::get('/auth', function () {
 Route::get('/pet', function () {
     return view('pet');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
