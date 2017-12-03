@@ -9,8 +9,16 @@
 
 <div class="container-fluid home-body">
 	<div class="container search-section">
-		<div class="">
-			
+		<div class="row">
+			<div class="col-md-offset-1 col-md-3">
+				@include('select')
+			</div>
+			<div class="col-md-3">
+				@include('select2')
+			</div>
+			<div class="col-md-offset-2 col-md-3">
+				@include('filter-btn')
+			</div>
 		</div>
 	</div>
 	<div class="container pet-grid">

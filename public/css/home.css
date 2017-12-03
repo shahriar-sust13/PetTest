@@ -5,8 +5,9 @@
 
 .search-section{
 	display: block;
-	height: 200px;
+	height: 150px;
 	border-bottom: solid #A4A4A4 1px;
+	padding-top: 40px;
 }
 
 .pet-grid{

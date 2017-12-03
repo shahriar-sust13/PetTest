@@ -30,3 +30,7 @@ Route::get('/pet', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/select', function () {
+    return view('select');
+});
