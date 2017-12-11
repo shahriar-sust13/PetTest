@@ -94,7 +94,7 @@
         				</form>
                         <form id="register-form" class="form-section disable-form" method="POST" action="{{ route('register') }}">
                             {{ csrf_field() }}
-                            
+
                             <div class="form-group">
                                 <input type="text" class="form-control form-item text-center" id="name" name="name" placeholder="Your Name">
                                 <input type="email" class="form-control form-item text-center" id="email" name="email" placeholder="Email">
