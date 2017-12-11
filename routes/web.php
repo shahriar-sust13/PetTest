@@ -34,3 +34,6 @@ Route::get('/profile', function () {
 Route::get('/select', function () {
     return view('select');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

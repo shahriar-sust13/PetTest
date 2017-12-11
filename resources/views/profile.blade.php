@@ -23,12 +23,12 @@
 				<p>
 					Hi, I'm Nazim. I'm a smart boy. I'm from Shaheen College. Everyone please respect me, salute me. I'll give you money, if you respect me. Hi, I'm Nazim. I'm a smart boy. I'm from Shaheen College. Everyone please respect me, salute me.
 				</p>
-				<!--
+				
 				<div class="col-md-10 social-span">
 					<a id="facebook" href="#"></a>
 					<a id="twitter" href="#"></a>
 				</div>
-				-->
+				
 			</div>
 		</div>
 	</div>

@@ -70,23 +70,39 @@
         				<div class="auth-btn-container">
         					<a id="login-btn" class="text-center active-btn" role="button">Log In</a><a id="register-btn" class="text-center" role="button">Sign Up</a>
         				</div>
-        				<form id="login-form" class="form-section active-form">
-        					<div class="form-group">
+        				<form id="login-form" class="form-section active-form" method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
+        					<div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
         						<input type="email" class="form-control form-item text-center" id="email" name="email" placeholder="Email">
-        						<input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="pwd">
-        					</div> 
-        					<div class="col-md-offset-3 col-md-6">
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                                <input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="password">
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="col-md-offset-3 col-md-6">
         						<button type="submit" class="submit-btn">Submit</button>
         					</div>
         				</form>
-                        <form id="register-form" class="form-section disable-form">
+                        <form id="register-form" class="form-section disable-form" method="POST" action="{{ route('register') }}">
+                            {{ csrf_field() }}
+                            
                             <div class="form-group">
                                 <input type="text" class="form-control form-item text-center" id="name" name="name" placeholder="Your Name">
                                 <input type="email" class="form-control form-item text-center" id="email" name="email" placeholder="Email">
-                                <input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="pwd">
+                                <input type="password" class="form-control form-item text-center" id="pwd" placeholder="Password" name="password">
+                                <input type="password" class="form-control form-item text-center" id="pwd" placeholder="Confirm Password" name="password_confirmation">
                             </div> 
-                            <div class="col-md-offset-3 col-md-6">
-                                <button type="submit" class="submit-btn">Submit</button>
+                            <div class="form-group" class="col-md-offset-3 col-md-6">
+                                <button type="submit" class="submit-btn">Register</button>
                             </div>
                         </form>
         			</div>
