@@ -55,7 +55,7 @@
                         <a class="text-center" href="{{ url('/home') }}">Home</a>
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
-                        <a class="text-center" href="{{ url('/auth') }}">LogIn</a>
+                        <a class="text-center" href="{{ route('login') }}">LogIn</a>
                     </div>
                 </div>
             </div>

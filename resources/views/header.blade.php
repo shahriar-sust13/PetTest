@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="logo-container col-md-4">
-                        <a href="">
+                        <a href="{{ route('welcome') }}">
                             <img src="{{ url('images/logo.png') }}">
                         </a>
                     </div>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="navbar-container text-right">
-                        <a class="text-center" href="#">Home</a>
+                        <a class="text-center" href=" {{ route('login') }} ">Home</a>
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
                         <!-- <a class="text-center" methods="POST" href="{{ route('logout') }}">LogOut</a> -->

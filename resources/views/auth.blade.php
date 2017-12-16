@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="logo-container col-md-4">
-                        <a href="">
+                        <a href=" {{ route('welcome') }} ">
                             <img src="{{ url('images/logo.png') }}">
                         </a>
                     </div>
@@ -58,7 +58,7 @@
                         <a class="text-center" href="{{ url('/home') }}">Home</a>
                         <a class="text-center" href="#">Blog</a>
                         <a class="text-center" href="#">QA</a>
-                        <a class="text-center" href="{{ url('/auth') }}">Log In</a>
+                        <a class="text-center" href="{{ route('login') }}">Log In</a>
                     </div>
                 </div>
             </div>
