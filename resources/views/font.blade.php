@@ -12,3 +12,5 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans"> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bevan">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kreon">

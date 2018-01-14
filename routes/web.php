@@ -33,3 +33,11 @@ Route::get('/select', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/blog/post', function(){
+	return view('new-blog');
+});
+
+Route::get('/blog/view', function(){
+	return view('article');
+});
