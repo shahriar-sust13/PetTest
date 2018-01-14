@@ -16,7 +16,7 @@
 			<h5>by <a href="#">Md. Nazim Uddin</a></h5>
 		</div>
 		<div class="article-item article-img">
-			<img src="{{ url('images/blog/2.jpg') }}">
+			<img src="{{ url('images/blog/3.jpg') }}">
 		</div>
 		<div class="article-item article-content">
 			<p>
