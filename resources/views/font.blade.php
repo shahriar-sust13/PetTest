@@ -14,3 +14,4 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bevan">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kreon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">

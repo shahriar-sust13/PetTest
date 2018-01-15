@@ -53,7 +53,8 @@
 		</div>
 		<div class="col-md-10 col-md-offset-1 pet-label">
 			<div class="col-md-offset-4 col-md-4 pet-type-container text-center">
-				<h5>Seeking for Shelter</h5>
+				<h5>Seeking for Shelter</h5> 
+				<!-- <h5>Seeking for Buyer <span><i>5600 Tk</i></span></h5> -->
 			</div>
 			<div class="col-md-offset-4 col-md-4 pet-contact-container text-center">
 				<button type="button" class="btn btn-success contact-btn text-center">Contact With Owner</button>

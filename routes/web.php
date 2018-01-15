@@ -41,3 +41,7 @@ Route::get('/blog/post', function(){
 Route::get('/blog/view', function(){
 	return view('article');
 });
+
+Route::get('/info-form', function(){
+	return view('profile-info-form');
+});

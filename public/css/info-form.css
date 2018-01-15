@@ -1,0 +1,48 @@
+
+.info-form{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.info-form-container{
+	display: block;
+	height: 750px;
+	width: 100%;
+	background-color: #E1E1E1;
+	padding: 10px 10px;
+}
+
+.headline-container{
+	display: block;
+	width: 100%;
+}
+
+.headline-container h3{
+	font-size: 28px;
+	font-family: 'Bitter';
+	color: #424242;
+}
+
+.info-item{
+	margin-top: 10px;
+}
+
+.info-item{
+	width: 100%;
+}
+
+.info-item h5{
+	font-family: 'Arvo';
+	font-size: 18px;
+	color: #3D3D3D;
+}
+
+.info-profile{
+	height: 40px;
+	width: 100%;
+}
+
+.description-text{
+	height: 250px;
+	width: 100%;
+}
