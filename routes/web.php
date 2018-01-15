@@ -27,9 +27,8 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/select', function () {
-    return view('select');
-});
+Route::get('/post', 'petPost@postForm')->name('postForm');
+Route::post('/post', 'petPost@postAdd')->name('postAdd');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -42,6 +41,5 @@ Route::get('/blog/view', function(){
 	return view('article');
 });
 
-Route::get('/info-form', function(){
-	return view('profile-info-form');
-});
+Route::get('/info-form', 'HomeController@profileInfoForm')->name('infoForm') ;
+Route::post('/info-form', 'HomeController@profileInfoFormEdit')->name('infoEdit') ;
