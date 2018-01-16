@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\profileEditReq ;
 use App\userProfile;
+use App\petImage;
+use App\User;
+use App\pet;
 use League\Flysystem\Exception;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\InfoCheck;
@@ -84,5 +87,59 @@ class HomeController extends Controller
         }
 
         return redirect('home');
+    }
+
+    public function profile($profileId)
+    {
+        $data = NULL ;
+
+        try
+        {
+            //$temp = User::findOrFail($profileId) ;
+            // $data['name'] = $temp->name ;
+            // return $temp->name ;
+            $data['name'] = User::findOrFail($profileId)->name ;
+        }
+
+        catch(\Exception $ex)
+        {
+            return "Invlid Request ".$profileId ;
+        }
+
+        try
+        {
+            $temp = userProfile::where('userId',$profileId)->get();
+            $data['fb'] = $temp[0]['facebookLink'] ;
+            $data['twt'] = $temp[0]['TwitterLink'] ;
+            $data['descr'] = $temp[0]['intro'] ;
+            $data['imgId'] = $profileId ;
+        }
+
+        catch(\Exception $ex)
+        {
+            return "Something Wrong" ;
+        }
+
+        $data['pets'] = array(); 
+
+        try
+        {
+            $pets = pet::where('userId',$profileId)->paginate(6) ;
+
+            foreach ($pets as $pet) {
+                $petInstance['name'] = $pet->petName ;
+                $petInstance['id'] = $pet->id ;
+                $tp = petImage::where('petId',$pet->id)->firstOrFail() ;
+                $petInstance['img'] = $tp->id ;
+                array_push($data['pets'], $petInstance);
+            }
+        }
+
+        catch(\Exception $ex)
+        {
+            return "Oh shit !!";
+        }
+//return $data ;
+        return view('profile',compact('data'));
     }
 }

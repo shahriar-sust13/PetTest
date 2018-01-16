@@ -29,6 +29,10 @@
 						</select>
 						<input type="number" class="form-control form-item text-center" id="name" name="price" placeholder="Price">
 						<textarea name="description" id="" class="form-item" placeholder="Description"></textarea>
+						<div class="item-container">
+							<h5>Image</h5>
+							<input type="file" name="img">
+						</div>
                     </div> 
                     <div class="">
                         <button type="submit" class="submit-btn">Submit</button>

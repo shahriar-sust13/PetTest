@@ -19,13 +19,9 @@ Route::get('/auth', function () {
     return view('auth');
 });
 
-Route::get('/pet', function () {
-    return view('pet');
-});
+Route::get('/pet/{id}', 'petController@petProfile')->name('petProfile');
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile/{id}', 'HomeController@profile')->name('profile') ;
 
 Route::get('/post', 'petPost@postForm')->name('postForm');
 Route::post('/post', 'petPost@postAdd')->name('postAdd');
