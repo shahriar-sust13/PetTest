@@ -37,5 +37,5 @@ Route::get('/blog/view', function(){
 	return view('article');
 });
 
-Route::get('/info-form', 'HomeController@profileInfoForm')->name('infoForm') ;
-Route::post('/info-form', 'HomeController@profileInfoFormEdit')->name('infoEdit') ;
+Route::get('/info-form', 'InfoController@profileInfoForm')->name('infoForm') ;
+Route::post('/info-form', 'InfoController@profileInfoFormEdit')->name('infoEdit') ;

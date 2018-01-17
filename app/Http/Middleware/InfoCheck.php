@@ -28,7 +28,7 @@ class InfoCheck
 
         catch(\Exception $ex)
         {
-            return redirect('infoForm');
+            return redirect('/info-form');
         }
 
         return $next($request);
