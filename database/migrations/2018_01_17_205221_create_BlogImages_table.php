@@ -13,9 +13,9 @@ class CreateBlogImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('blogImages', function (Blueprint $table) {
-            $table->string('path',100);
-            $table->string('blogId');
+        Schema::create('BlogImages', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('blogId');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateBlogImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blogImages');
+        Schema::dropIfExists('BlogImages');
     }
 }

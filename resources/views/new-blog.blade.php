@@ -12,14 +12,15 @@
 	<div class="page-headline-container text-center">
 		<h3>Post Your Article</h3>
 	</div>
-	<form class="article-form-section">
+	<form class="article-form-section" method="POST" action="{{ url('/blog/post') }}" enctype="multipart/form-data">
+		{{ csrf_field() }}
 		<div class="item-container">
 			<h5>Article Title</h5>
 			<input type="text" name="article-title" class="title-text">
 		</div>
 		<div class="item-container">
 			<h5>Content</h5>
-			<textarea class="content-text">
+			<textarea class="content-text" name='article-content'>
 			
 			</textarea>
 		</div>

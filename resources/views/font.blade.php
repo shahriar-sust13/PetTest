@@ -15,3 +15,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bevan">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kreon">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candal">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rammetto+One">

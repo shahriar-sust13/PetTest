@@ -31,11 +31,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog/post', function(){
 	return view('new-blog');
-});
+})->middleware('auth');
 
-Route::get('/blog/view', function(){
-	return view('article');
-});
+Route::post('/blog/post', 'BlogController@addArticle');
+
+Route::get('/blog/view/{id}', "BlogController@showArticle");
+
+Route::get('/blog/home', 'BlogController@renderBlog');
 
 Route::get('/info-form', 'InfoController@profileInfoForm')->name('infoForm') ;
 Route::post('/info-form', 'InfoController@profileInfoFormEdit')->name('infoEdit') ;
