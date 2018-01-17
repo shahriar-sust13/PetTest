@@ -12,7 +12,7 @@
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8">
 			<div class="post-box">
-				<form class="form-section" method="POST" action="{{ route('postAdd') }}">
+				<form class="form-section" enctype="multipart/form-data" method="POST" action="{{ route('postAdd') }}">
 					{{ csrf_field() }}
                     <div class="form-group">
                         <input type="text" class="form-control form-item text-center" id="name" name="title" placeholder="Title">

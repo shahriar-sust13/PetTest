@@ -67,18 +67,18 @@ class HomeController extends Controller
             return "Something Wrong" ;
         }
 
-        $data['pets'] = array(); 
+        $pets = NULL ; 
+
 
         try
         {
-            $pets = pet::where('userId',$profileId)->paginate(6) ;
+            $pets = pet::where('userId',$profileId)->orderBy('id','desc')->paginate(8) ;
 
             foreach ($pets as $pet) {
-                $petInstance['name'] = $pet->petName ;
-                $petInstance['id'] = $pet->id ;
+                $pet['name'] = $pet->petName ;
+                $pet['id'] = $pet->id ;
                 $tp = petImage::where('petId',$pet->id)->firstOrFail() ;
-                $petInstance['img'] = $tp->id ;
-                array_push($data['pets'], $petInstance);
+                $pet['img'] = $tp->id ;
             }
         }
 
@@ -87,6 +87,6 @@ class HomeController extends Controller
             return "Oh shit !!";
         }
 //return $data ;
-        return view('profile',compact('data'));
+        return view('profile',compact('data','pets'));
     }
 }

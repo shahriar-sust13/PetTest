@@ -15,6 +15,7 @@ class petPost extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('checkInfo');
     }
 
     public function postForm()
@@ -24,6 +25,7 @@ class petPost extends Controller
 
     public function postAdd(petPostReq $req)
     {
+        //return $req->file('img')->getClientOriginalExtension() ;
     	$pet = new pet ;
 
     	$pet->petDescription = $req->description ;
@@ -41,14 +43,17 @@ class petPost extends Controller
 
         $new_path = "".$pImage->id.".jpg" ;
 
-        if($file = $req->file('img'))
+        if($req->hasFile('img')){
+            $file = $req->file('img') ;
             $file->move('images/pets/',$new_path);
+        }
         else
         {
             $new_path = 'images/pets/'.$new_path ;
             File::copy('images/pets/0.jpg',$new_path);
+            //return "ok" ;
         }
 
-    	return view('home') ;
+    	return redirect('/home') ;
     }
 }

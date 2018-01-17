@@ -7,7 +7,7 @@
 	<div class="container pet-grid">
 		<div class="row">
 
-			@foreach($data['pets'] as $pet)
+			@foreach($pets as $pet)
 				<div class="col-md-3 grid-cell">
 					<div class="pet-container" id="pet1">
 						<div class="cell-img text-center">
@@ -21,92 +21,10 @@
 					</div>
 				</div>
 			@endforeach
-
-			<!-- <div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet2">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet2.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Husky Puppy</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div>
-			<div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet3">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet3.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Corgi Dog</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div>
-			<div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet4">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet4.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Three Kittens</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div>
-			<div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet5">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet4.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Three Kittens</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div>
-			<div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet6">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet3.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Corgi Dog</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div>
-			<div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet7">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet2.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Husky Puppy</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div>
-			<div class="col-md-3 grid-cell">
-				<div class="pet-container" id="pet8">
-					<div class="cell-img text-center">
-						<img src="{{ url('images/pet1.jpg') }}">
-					</div>
-					<div class="cell-text-section text-center">
-						<p class="pet-name">Husky Puppy</p>
-					</div>
-					<div class="overlay"></div>
-					<a href="#" class="text-center">Details</a>
-				</div>
-			</div> -->
+			
 		</div>
+
+		{{ $pets->links() }}
 
 		<!-- <div class="row pagination-section text-center">
 			<ul class="pagination">
