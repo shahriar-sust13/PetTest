@@ -70,7 +70,7 @@ class BlogController extends Controller
 	*
 	*/
 	public function renderBlog(Request $request){
-		$articles = Blog::orderBy('id', 'desc')->paginate(8);
+		$articles = Blog::orderBy('id', 'desc');
 
 		foreach($articles as $article){
 			$limit = 55;

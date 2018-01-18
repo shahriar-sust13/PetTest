@@ -8,6 +8,8 @@ use App\userProfile;
 use App\petImage;
 use App\User;
 use App\pet;
+use App\Blog;
+use App\BlogImage;
 use League\Flysystem\Exception;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\InfoCheck;
@@ -99,6 +101,16 @@ class HomeController extends Controller
         return view('home',compact('pets','ctg','type'));
     }
 
+    /**
+    *   It will return the ImageId of Article blogId 
+    */
+    function getImageId($blogId){
+        $image = BlogImage::where('blogId', $blogId)->first();
+        if( $image == null )    return 0;
+        $imageId = $image->id;
+        return $imageId;
+    }
+
     public function profile($profileId)
     {
         $data = NULL ;
@@ -149,7 +161,37 @@ class HomeController extends Controller
         {
             return "Oh shit !!";
         }
-//return $data ;
-        return view('profile',compact('data','pets'));
+
+        $articles = Blog::where('userId', $profileId)->orderBy('id', 'desc')->get();
+
+        foreach($articles as $article){
+            $limit = 55;
+            $content = $article->description;
+            if( strlen($content)>$limit ){
+                $content = substr($content, 0, $limit);
+                $content = $content.'...';
+            }
+            $article->description = $content;
+            $article->imageId = $this->getImageId($article->id);
+        }
+
+        return view('profile',compact('data','pets', 'articles'));
+    }
+
+    public function welcomePage(){
+        $articles = Blog::orderBy('id', 'desc')->take(4)->get();
+
+        foreach($articles as $article){
+            $limit = 120;
+            $content = $article->description;
+            if( strlen($content)>$limit ){
+                $content = substr($content, 0, $limit);
+                $content = $content.'...';
+            }
+            $article->description = $content;
+            $article->imageId = $this->getImageId($article->id);
+        }
+
+        return view('welcome', compact('articles'));
     }
 }
