@@ -33,7 +33,70 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $pets = NULL ;
+
+        try
+        {
+            $uid = Auth::user()->id ;
+
+            $pets = pet::where('userId',$uid)->orderBy('id','desc')->paginate(8) ;
+
+            foreach ($pets as $pet) {
+                $pet['name'] = $pet->petName ;
+                $pet['id'] = $pet->id ;
+                $pet['ctg'] = $pet->category ;
+                $tp = petImage::where('petId',$pet->id)->firstOrFail() ;
+                $pet['img'] = $tp->id ;
+                $pet['dam'] = $pet->price ;
+            }
+        }
+
+        catch(\Exception $ex)
+        {
+            return "Problems Occured ! Sorry :( " ;
+        }
+
+        $ctg = -1 ;
+        $type = -1 ;
+
+        return view('home',compact('pets','ctg','type'));
+    }
+
+    public function Rhome(Request $req)
+    {
+        $pets = NULL ;
+
+        try
+        {
+            $uid = Auth::user()->id ;
+
+            $pets = pet::where('userId',$uid)->orderBy('id','desc')->paginate(8) ;
+
+            foreach ($pets as $pet) {
+                $pet['name'] = $pet->petName ;
+                $pet['id'] = $pet->id ;
+                $pet['ctg'] = $pet->category ;
+                $tp = petImage::where('petId',$pet->id)->firstOrFail() ;
+                $pet['img'] = $tp->id ;
+                $pet['dam'] = $pet->price ;
+            }
+        }
+
+        catch(\Exception $ex)
+        {
+            return "Problems Occured ! Sorry :( " ;
+        }
+
+        $ctg = -1 ;
+        $type = -1 ;
+
+        if($req->ctg >= 2 && $req->ctg <= 4)
+            $ctg = $req->ctg ;
+
+        if($req->type >= 2 && $req->type <= 3)
+            $type = $req->type ;
+
+        return view('home',compact('pets','ctg','type'));
     }
 
     public function profile($profileId)

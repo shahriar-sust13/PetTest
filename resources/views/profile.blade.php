@@ -37,8 +37,8 @@
 <div class="container profile-body">
 	<div class="row">
 		<div class="col-md-offset-1 col-md-10 col-sm-12 tab-menu-section">
-			<a id="item1" class="col-sm-4 col-md-2 menu-item active-item text-center" role="button">My Pet</a>
-			<a id="item2" class="col-sm-4 col-md-2 menu-item text-center" role="button">My Blog</a>
+			<a id="item1" class="col-sm-4 col-md-2 menu-item active-item text-center" role="button">Pet's</a>
+			<a id="item2" class="col-sm-4 col-md-2 menu-item text-center" role="button">Blog's</a>
 		</div>
 	</div>
 </div>

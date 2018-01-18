@@ -28,6 +28,7 @@ Route::post('/post', 'petPost@postAdd')->name('postAdd');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@Rhome')->name('rHome');
 
 Route::get('/blog/post', function(){
 	return view('new-blog');

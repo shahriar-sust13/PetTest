@@ -8,8 +8,8 @@
 
   <!-- Custom select structure --> 
 <div class="select_mate text-center" data-mate-select="active" >
-<select name="" onchange="" onclick="return false;" id="">
-<option value="" class="text-center">Pet Type</option>
+<select name="type" onchange="" onclick="return false;" id="">
+<option value="0" class="text-center">Pet Type</option>
 <option value="1" class="text-center">All</option>
 <option value="2" class="text-center">Dog</option>
 <option value="3" class="text-center">Cat</option>

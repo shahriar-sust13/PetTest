@@ -57,6 +57,8 @@
 					<h5>Seeking for Buyer <span><i> {{$pet['price']}} Tk</i></span></h5>
 				@elseif($pet['ctg'] == 2)
 					<h5>Seeking for Shelter</h5> 
+				@else 
+					<h5>Story</h5>
 				@endif
 			</div>
 			<div class="col-md-offset-4 col-md-4 pet-contact-container text-center">
