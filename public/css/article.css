@@ -85,3 +85,30 @@
 	display: block;
 	height: 65px;
 }
+
+.comment-form-section{
+	margin-top: 20px;
+	background-color: #DADADA;
+	border: solid 1px #B7B7B7; 
+	padding: 10px;
+}
+
+.comment-container{
+	margin-top: 20px;
+	background-color: #DADADA;
+	border: solid 1px #B7B7B7; 
+	padding: 10px;
+}
+
+.author-section img{
+	height: 60px;
+}
+
+.author-section h3{
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+.comment-section p{
+	font-size: 16px;
+}

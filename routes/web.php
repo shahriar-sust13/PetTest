@@ -36,7 +36,17 @@ Route::post('/blog/post', 'BlogController@addArticle');
 
 Route::get('/blog/view/{id}', "BlogController@showArticle");
 
+Route::post('/blog/view/{id}', "BlogController@postComment");
+
 Route::get('/blog/home', 'BlogController@renderBlog');
 
 Route::get('/info-form', 'InfoController@profileInfoForm')->name('infoForm') ;
 Route::post('/info-form', 'InfoController@profileInfoFormEdit')->name('infoEdit') ;
+
+Route::get('/test', function(){
+	return view('test');
+});
+
+Route::post('/uploadpic', 'InfoController@changePic');
+
+

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\profileEditReq ;
 use App\userProfile;
+use App\UserImage;
 use App\petImage;
 use App\User;
 use App\pet;
@@ -57,20 +58,33 @@ class InfoController extends Controller
             $userProfile->userId = $uid ;
             $userProfile->mobileno = $req->mobileno ;
 
-            $new_path = "".$uid.".jpg" ;
+            $userImage = new userImage();
+            $userImage->userId = $uid;
+            $userImage->imageId = 0;
 
-            if($file = $req->file('img'))
-                $file->move('images/profiles',$new_path);
-            else
-            {
-                $new_path = 'images/profiles/'.$new_path ;
-                File::copy('images/profiles/0.jpg',$new_path);
-            }
+            $userImage->save();
 
-            $userProfile->currentProfileImagePath = $uid ;
+            $userProfile->currentProfileImagePath = $uid ; // Hudai ase
+
             $userProfile->save();
         }
 
         return redirect('home');
+    }
+
+    public function changePic(Request $request){
+        $userId = \Auth::user()->id;
+
+        if( $request->hasFile('img') ){
+            $userImage = UserImage::where('userId', $userId)->first();
+            $userImage->imageId = $userId;
+            $userImage->save();
+
+            $image = $request->file('img');
+            $imageName = $userId . '.' . $image->getClientOriginalExtension();
+            $image->move('images/profiles', $imageName);
+        }
+
+        return redirect('profile/'.$userId);
     }
 }

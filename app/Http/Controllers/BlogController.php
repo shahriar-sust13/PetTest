@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Blog;
 use App\BlogImage;
 use App\User;
+use App\Comment;
+use App\UserImage;
 
 class BlogController extends Controller
 {
@@ -63,7 +65,12 @@ class BlogController extends Controller
     	$imageId = $this->getImageId($blogId);
     	$authorId = $blog->userId;
     	$authorName = User::find($authorId)->name;
-    	return view('article', ['title'=>$blog->title, 'authorName'=>$authorName, 'authorId'=>$authorId, 'imageId'=>$imageId, 'content'=>$blog->description]);
+        $comments = Comment::where('blogId', $id)->orderBy('id', 'desc')->get();
+        foreach($comments as $comment){
+            $comment->imageId = UserImage::where('userId', $comment->userId)->first()->imageId;
+            $comment->authorName = User::find($comment->userId)->name;
+        }
+    	return view('article', ['id'=> $id, 'title'=>$blog->title, 'authorName'=>$authorName, 'authorId'=>$authorId, 'imageId'=>$imageId, 'content'=>$blog->description, 'comments'=>$comments]);
     }
 
     /**
@@ -85,6 +92,16 @@ class BlogController extends Controller
 
 		return view('blog', ['articles'=>$articles]);
 	}
+
+    public function postComment(Request $request, $id){
+        $comment = new Comment;
+        $userId = \Auth::user()->id;
+        $comment->blogId = $id;
+        $comment->userId = $userId;
+        $comment->description = $request->input('comment');
+        $comment->save();
+        return redirect('blog/view/'.$id);
+    }
 
 
 }

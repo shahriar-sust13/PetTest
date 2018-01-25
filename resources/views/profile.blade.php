@@ -17,6 +17,11 @@
 				<div class="profile-pic">
 					<img src="{{ url('images/profiles/'.$data['imgId'].'.jpg') }}">
 				</div>
+				<div class="profile-pic-btn-container">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#photoModal">
+					  	Change Profile Picture
+					</button>
+				</div>
 			</div>
 			<div class="col-md-9 profile-intro-section">
 				<h5>{{ $data['name'] }}</h5>
@@ -33,6 +38,27 @@
 		</div>
 	</div>
 </div>
+
+<!-- Modal -->
+		<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      	<div class="modal-header">
+			        	<h3 class="modal-title text-center" id="exampleModalLabel">Select Your Photo</h3>
+			      	</div>
+				    <div class="modal-body">
+				        <form method="POST" action="{{ url('uploadpic') }}" enctype="multipart/form-data">
+				        	{{ csrf_field() }}
+				        	<input type="file" name="img">
+				        	<button type="submit" class="btn btn-success">Upload Photo</button>
+				        </form>
+				    </div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
+			      	</div>
+			    </div>
+		  	</div>
+		</div>
 
 <div class="container profile-body">
 	<div class="row">

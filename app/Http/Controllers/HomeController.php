@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\profileEditReq ;
 use App\userProfile;
+use App\userImage;
 use App\petImage;
 use App\User;
 use App\pet;
@@ -117,9 +118,6 @@ class HomeController extends Controller
 
         try
         {
-            //$temp = User::findOrFail($profileId) ;
-            // $data['name'] = $temp->name ;
-            // return $temp->name ;
             $data['name'] = User::findOrFail($profileId)->name ;
         }
 
@@ -134,7 +132,8 @@ class HomeController extends Controller
             $data['fb'] = $temp[0]['facebookLink'] ;
             $data['twt'] = $temp[0]['TwitterLink'] ;
             $data['descr'] = $temp[0]['intro'] ;
-            $data['imgId'] = $profileId ;
+            $profilePic = userImage::where('userId', $profileId)->first();
+            $data['imgId'] = $profilePic->imageId ;
         }
 
         catch(\Exception $ex)
