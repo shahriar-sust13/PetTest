@@ -15,28 +15,57 @@
 	background-color: #FAFAFA !important;
 	border: transparent;
 	border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+	//transition: 1s all;
 }
 
 .profile-pic-container{
-	padding: 25px 34px !important;
-	padding-right: 0px !important;
+	padding: 25px 15px 10px 15px !important;
+	//padding-right: 0px !important;
 }
 
 .profile-pic{
 	border: solid #D3D3D3 6px;
 	border-radius: 90px;
-	height: 150px !important;
+	height: 155px !important;
+	width: 155px !important;
 	overflow: hidden;
 }
 
 .profile-pic img{
-	height: 150px;
+	height: 155px;
 }
+
+/*
+.profile-box:hover .profile-pic-btn-container{
+	display: block;
+}
+*/
+
+.profile-pic-btn-container{
+	margin-top: 10px;
+	display: none;
+}
+
+.profile-pic-btn{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	outline: none;
+	border: none;
+	color: #DDDDDD;
+	font-size: 16px;
+	background-color: #8F8F8F;
+	transition: 0.8s all;
+}
+
+.profile-pic-btn:hover{
+	background-color: #3C3B3B;
+}
+
 
 .profile-intro-section{
 	padding-top: 30px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	padding-left: 20px !important;
 }
 
@@ -54,41 +83,42 @@
 	font-family: "Kreon";
 }
 
+.social-span{
+	padding-left: 0px !important;
+}
+
 .social-span a{
-	margin-left: 5px;
-	margin-right: 5px;
+	font-size: 16px;
+	border-radius: 0px;
 }
 
 #facebook{
 	display: inline-block;
-	height: 50px;
-	width: 50px;
-	background: url('../images/fb2_grey.png') no-repeat;
-	background-position: center center;
-	background-size: 50px 50px;
+	width: 110px;
+	background-color: #45619d;
+	color: #F9F9F9;
 	transition: all 1s;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #facebook:hover{
-	background: url('../images/fb2.png') no-repeat;
-	background-position: center center;
-	background-size: 50px 50px;
+	text-decoration: none;
 }
 
 #twitter{
 	display: inline-block;
-	height: 50px;
-	width: 50px;
-	background: url('../images/twitter_grey.png') no-repeat;
-	background-position: center center;
-	background-size: 50px 50px;
+	width: 110px;
+	background-color: #1da1f2;
+	color: #F9F9F9;
 	transition: all 1s;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 10px;
 }
 
 #twitter:hover{
-	background: url('../images/twitter.png') no-repeat;
-	background-position: center center;
-	background-size: 50px 50px;
+	text-decoration: none;
 }
 
 .tab-menu-section{

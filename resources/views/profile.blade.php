@@ -13,15 +13,17 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8 profile-box">
-			<div class="col-md-3 profile-pic-container">
+			<div class="col-md-3 profile-pic-container text-center">
 				<div class="profile-pic">
 					<img src="{{ url('images/profiles/'.$data['imgId'].'.jpg') }}">
 				</div>
+				
 				<div class="profile-pic-btn-container">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#photoModal">
-					  	Change Profile Picture
+					<button type="button" class="profile-pic-btn" data-toggle="modal" data-target="#photoModal">
+					  	Change Picture
 					</button>
 				</div>
+				
 			</div>
 			<div class="col-md-9 profile-intro-section">
 				<h5>{{ $data['name'] }}</h5>
@@ -30,8 +32,8 @@
 				</p>
 				
 				<div class="col-md-10 social-span">
-					<a id="facebook" href={{"https://www.facebook.com/".$data['fb']}}></a>
-					<a id="twitter" href={{"https://twitter.com/".$data['twt']}}></a>
+					<a id="facebook" class="text-center" href={{"https://www.facebook.com/".$data['fb']}}>facebook</a>
+					<a id="twitter" class="text-center" href={{"https://twitter.com/".$data['twt']}}>twitter</a>
 				</div>
 				
 			</div>

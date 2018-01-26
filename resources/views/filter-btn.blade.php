@@ -5,5 +5,5 @@
 </head>
 
 <div class="btn-container">
-	<button type="submit">Filter</button>
+	<button type="submit" class="filter-btn">Filter</button>
 </div>

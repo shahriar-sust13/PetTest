@@ -19,4 +19,12 @@ $(document).ready( function(){
 		$("#tab" + id).addClass("active-tab");
 	});
 
+	$(".profile-box").mouseenter( function(){
+		$(".profile-pic-btn-container").fadeToggle();
+	});
+
+	$(".profile-box").mouseleave( function(){
+		$(".profile-pic-btn-container").fadeToggle();
+	});
+
 });
