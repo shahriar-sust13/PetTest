@@ -24,7 +24,7 @@
                 <div class="col-md-4">
                     <div class="logo-container col-md-4">
                         <a href="{{ route('welcome') }}">
-                            <img src="{{ url('images/logo.png') }}">
+                            <img src="{{ url('images/logo2.png') }}">
                         </a>
                     </div>
                     <div class="col-md-6 logo-text">
@@ -33,22 +33,22 @@
                 </div>
                 <div class="col-md-8">
                     <div class="navbar-container text-right">
-                        <a class="text-center" href=" {{ route('login') }} ">Home</a>
-                        <a class="text-center" href="#">Blog</a>
-                        <a class="text-center" href="#">QA</a>
-                        <!-- <a class="text-center" methods="POST" href="{{ route('logout') }}">LogOut</a> -->
-                        <a class="text-center" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            Logout
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
+                        <a class="text-center" href=" {{ url('home') }} ">Home</a>
+                        <a class="text-center" href=" {{ url('blog/home') }} ">Blog</a>
+                        @if( Auth::check() )
+                            <a class="text-center user-button" role="button">{{ Auth::user()->name }} <span class="caret"></span></a>
+                            <ul class="custom-dropdown">
+                                <li><a class="text-center" href="{{url('/profile/'.Auth::user()->id)}}">Profile</a></li>
+                                <li><a class="text-center" href="{{url('/logout')}}">Log Out</a></li>
+                            </ul>
+                        @else
+                            <a class="text-center" href="{{ route('login') }}">LogIn</a>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
 
 </div>
+
+<script src="{{ url('js/header.js') }}"></script>

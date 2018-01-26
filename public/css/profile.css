@@ -21,7 +21,6 @@
 
 .profile-pic-container{
 	padding: 25px 15px 10px 15px !important;
-	//padding-right: 0px !important;
 }
 
 .profile-pic{
@@ -36,12 +35,6 @@
 	height: 155px;
 }
 
-/*
-.profile-box:hover .profile-pic-btn-container{
-	display: block;
-}
-*/
-
 .profile-pic-btn-container{
 	margin-top: 10px;
 	display: none;
@@ -54,6 +47,7 @@
 	border: none;
 	color: #DDDDDD;
 	font-size: 16px;
+	font-family: "Acme";
 	background-color: #8F8F8F;
 	transition: 0.8s all;
 }

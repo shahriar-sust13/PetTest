@@ -26,12 +26,12 @@
 	</div>
 	<div class="container pet-grid">
 		<div class="row">
-			@foreach($pets as $pet)
+			@foreach($pets as $key => $pet)
 				@if(($ctg != -1 && $pet['ctg'] != $ctg) || ($type != -1 && $pet['petType'] != $type))
 
 				@else
 				<div class="col-md-3 grid-cell">
-					<div class="pet-container" id="pet1">
+					<div class="pet-container" id="pet{{$key+1}}">
 						<div class="cell-img text-center">
 							<img src="{{ url('images/pets/'.$pet['img'].'.jpg') }}">
 						</div>

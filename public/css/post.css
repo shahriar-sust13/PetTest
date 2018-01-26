@@ -1,19 +1,62 @@
 
 .post-section{
-	padding: 80px 0px;
+	padding: 50px 0px;
 }
 
 .post-box{
 	display: block;
 	margin-left: 70px;
 	margin-right: 70px;
-	height: 620px;
+	height: 700px;
 	padding: 20px 20px;
 	background-color: #fff;
 	box-shadow: 0 1px 6px rgba(57,73,76,.35);
 }
 
-.form-item{
-	margin-top: 10px;
-	margin-bottom: 10px;
+.info-item{
+	margin-top: 15px;
+}
+
+.info-item{
+	width: 100%;
+}
+
+.info-item h5{
+	font-family: 'Acme';
+	font-size: 18px;
+	margin-bottom: 5px;
+	color: #3D3D3D;
+}
+
+.info-input{
+	height: 40px;
+	width: 100%;
+	font-size: 20px;
+	font-family: "Roboto Slab";
+	padding: 5px;
+}
+
+.description-text{
+	height: 150px;
+	width: 100%;
+	padding: 5px;
+	font-size: 20px;
+	font-family: "Roboto Slab";
+}
+
+.article-submit-btn{
+	outline: none !important;
+	height: 60px;
+	width: 200px;
+	font-size: 28px;
+	color: #1aca94;
+	font-family: 'Bree Serif';
+	background: transparent !important;
+	border: solid 3px #1aca94;
+	transition: all 0.8s;
+}
+
+.article-submit-btn:hover{
+	background-color: #1aca94 !important;
+	color: #F0F0F0;
 }

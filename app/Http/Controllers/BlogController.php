@@ -77,7 +77,7 @@ class BlogController extends Controller
 	*
 	*/
 	public function renderBlog(Request $request){
-		$articles = Blog::orderBy('id', 'desc');
+		$articles = Blog::orderBy('id', 'desc')->paginate(8);
 
 		foreach($articles as $article){
 			$limit = 55;
@@ -89,7 +89,6 @@ class BlogController extends Controller
 			$article->description = $content;
 			$article->imageId = $this->getImageId($article->id);
 		}
-
 		return view('blog', ['articles'=>$articles]);
 	}
 

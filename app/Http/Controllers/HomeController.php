@@ -174,23 +174,10 @@ class HomeController extends Controller
             $article->imageId = $this->getImageId($article->id);
         }
 
-        return view('profile',compact('data','pets', 'articles'));
+        $userId = $profileId;
+
+        return view('profile', compact('data', 'pets', 'articles', 'userId'));
     }
 
-    public function welcomePage(){
-        $articles = Blog::orderBy('id', 'desc')->take(4)->get();
-
-        foreach($articles as $article){
-            $limit = 120;
-            $content = $article->description;
-            if( strlen($content)>$limit ){
-                $content = substr($content, 0, $limit);
-                $content = $content.'...';
-            }
-            $article->description = $content;
-            $article->imageId = $this->getImageId($article->id);
-        }
-
-        return view('welcome', compact('articles'));
-    }
+    
 }

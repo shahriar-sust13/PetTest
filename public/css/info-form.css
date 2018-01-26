@@ -6,7 +6,7 @@
 
 .info-form-container{
 	display: block;
-	height: 750px;
+	height: 680px;
 	width: 100%;
 	background-color: #E1E1E1;
 	padding: 10px 10px;
@@ -34,15 +34,40 @@
 .info-item h5{
 	font-family: 'Arvo';
 	font-size: 18px;
+	margin-bottom: 5px;
 	color: #3D3D3D;
 }
 
-.info-profile{
+.info-input{
 	height: 40px;
 	width: 100%;
+	font-size: 20px;
+	font-family: "Acme";
+	padding: 5px;
 }
 
 .description-text{
 	height: 250px;
 	width: 100%;
+	padding: 5px;
+	font-size: 20px;
+	font-family: "Acme";
+}
+
+.article-submit-btn{
+	outline: none !important;
+	height: 60px;
+	width: 200px;
+	font-size: 28px;
+	color: #1aca94;
+	font-family: 'Bree Serif';
+	background: transparent !important;
+	border: solid 3px #1aca94;
+	//border-radius: 45px;
+	transition: all 0.8s;
+}
+
+.article-submit-btn:hover{
+	background-color: #1aca94 !important;
+	color: #F0F0F0;
 }

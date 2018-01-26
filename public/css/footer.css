@@ -3,3 +3,9 @@
 	height: 70px;
 	background-color: #2C2C2C;
 }
+
+.footer-container h5{
+	margin-top: 20px;
+	font-size: 18px;
+	color: #F0F0F0;
+}

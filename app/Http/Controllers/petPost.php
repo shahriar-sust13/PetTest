@@ -25,15 +25,21 @@ class petPost extends Controller
 
     public function postAdd(petPostReq $req)
     {
-        //return $req->file('img')->getClientOriginalExtension() ;
     	$pet = new pet ;
+
+        
 
     	$pet->petDescription = $req->description ;
     	$pet->category = $req->postType ;
     	$pet->petName = $req->title ;
     	$pet->petType = $req->petType ;
     	$pet->userId = Auth::user()->id ;
-    	$pet->price = $req->price ;
+        if( $req->postType == 3 ){
+            $pet->price = $req->price;
+        }
+        else{
+            $pet->price = 0;
+        }
 
     	$pet->save();
 

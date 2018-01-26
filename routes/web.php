@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@welcomePage')->name('welcome');
+Route::get('/', 'WelcomeController@welcomePage')->name('welcome');
 
 Route::get('/auth', function () {
     return view('auth');
@@ -48,5 +48,10 @@ Route::get('/test', function(){
 });
 
 Route::post('/uploadpic', 'InfoController@changePic');
+
+Route::get('/logout', function(){
+	\Auth::logout();
+	return redirect('/');
+});
 
 

@@ -46,7 +46,7 @@
                 <div class="col-md-4">
                     <div class="logo-container col-md-4">
                         <a href=" {{ route('welcome') }} ">
-                            <img src="{{ url('images/logo.png') }}">
+                            <img src="{{ url('images/logo2.png') }}">
                         </a>
                     </div>
                     <div class="col-md-6 logo-text">

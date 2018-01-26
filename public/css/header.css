@@ -1,6 +1,6 @@
 
 .header-bg{
-	background-color: #F5F5F5;
+	background-color: #ECECEC;
 	border-bottom: solid #DEDEDE 1px;
 }
 
@@ -55,4 +55,9 @@
 	color: #F5CC15;
 	border: solid #F5CC15 1px;
 	padding: 5px;
+}
+
+.custom-dropdown{
+	list-style-type: none;
+	display: none;
 }

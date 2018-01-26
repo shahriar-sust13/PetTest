@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +44,7 @@
                 <div class="col-md-4">
                     <div class="logo-container col-md-4">
                         <a href="">
-                            <img src="{{ url('images/logo.png') }}">
+                            <img src="{{ url('images/logo2.png') }}">
                         </a>
                     </div>
                     <div class="col-md-6 logo-text">
@@ -53,9 +54,16 @@
                 <div class="col-md-8">
                     <div class="navbar-container text-right">
                         <a class="text-center" href="{{ url('/home') }}">Home</a>
-                        <a class="text-center" href="#">Blog</a>
-                        <a class="text-center" href="#">QA</a>
-                        <a class="text-center" href="{{ route('login') }}">LogIn</a>
+                        <a class="text-center" href="{{ url('/blog/home') }}">Blog</a>
+                        @if( Auth::check() )
+                            <a class="text-center user-button" role="button">{{ Auth::user()->name }} <span class="caret"></span></a>
+                            <ul class="custom-dropdown">
+                                <li><a class="text-center" href="{{url('/profile/'.Auth::user()->id)}}">Profile</a></li>
+                                <li><a class="text-center" href="{{url('/logout')}}">Log Out</a></li>
+                            </ul>
+                        @else
+                            <a class="text-center" href="{{ route('login') }}">LogIn</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -73,15 +81,15 @@
         </div>
     </div>
 
-    @include('popular-product')
-
     @include('pet-quotes')
 
     @include('blog-panel')
 
+    @include('footer')
+
 
     <!-- Scripts -->
-    <!--<script src="{{ url('js/welcome.js') }}"></script> -->
+    <script src="{{ url('js/welcome.js') }}"></script>
         
 
 </body>

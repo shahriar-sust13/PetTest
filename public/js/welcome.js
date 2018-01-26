@@ -26,4 +26,8 @@ $(document).ready( function(){
 			$("#" + id + " a").fadeOut("slow");
 		}
 	);
+
+	$(".user-button").click( function(){
+		$(".custom-dropdown").fadeToggle();
+	});
 });
