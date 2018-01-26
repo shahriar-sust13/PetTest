@@ -76,11 +76,11 @@
 }
 
 #login-form{
-	height: 225px;
+	min-height: 225px;
 }
 
 #register-form{
-	height: 300px;
+	min-height: 380px;
 }
 
 .active-form{
