@@ -42,7 +42,7 @@ class HomeController extends Controller
         {
             $uid = Auth::user()->id ;
 
-            $pets = pet::where('userId',$uid)->orderBy('id','desc')->paginate(8) ;
+            $pets = pet::orderBy('id','desc')->paginate(8) ;
 
             foreach ($pets as $pet) {
                 $pet['name'] = $pet->petName ;

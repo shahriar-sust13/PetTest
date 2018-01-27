@@ -13,7 +13,7 @@
 			</div>
 			<div class="col-md-8 slider-body">
 				<div class="slider-content text-center" id="content0">
-					<p class="author-text">TOutside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.</p>
+					<p class="author-text">Outside of a dog, a book is a man's best friend. Inside of a dog it's too dark to read.</p>
 					<h3 class="author-name">Groucho Marx</hy3>
 				</div>
 				<div class="slider-content text-center active-content" id="content1" style="display: block;">
